@@ -3,11 +3,17 @@ body {
     background-repeat: repeat;
  }
 
- .header {
+ #header {
      font-size: 64px;
      text-align: center;
      color: yellow;
  }
+
+ #header2 {
+    font-size: 64px;
+    text-align: center;
+    color: yellow;
+}
 
  button{
 	background-color: pink;
