@@ -1,0 +1,40 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-repeat: repeat;
+ }
+
+ .header {
+     font-size: 64px;
+     text-align: center;
+     color: yellow;
+ }
+
+ button{
+	background-color: pink;
+	width: 20%;
+    height: 100px;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    border-radius: 48px;
+    border: 2px solid black;
+ }
+ button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+ button:active {
+    background-color: rgb(241, 155, 169);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+ #intro {
+     text-align: center;
+     color: whitesmoke;
+     left: 40%;
+     margin-top: 10%;
+     font-size: 24px;
+ }
