@@ -7,6 +7,7 @@ $(document).ready(function () {
         ('clicked', $('#intro').hide());
         ('clicked', $('#header').hide());
         ('clicked', $('#header2').text("Answer all questions until the time runs out"));
+        ('clicked', $('#timer').show());
 
         // questions:
         var options = [
@@ -42,6 +43,21 @@ $(document).ready(function () {
                 answer: 1,
 
             }];
+
+
+        var correctCount = 0;
+        var wrongCount = 0;
+
+
+
+        // Timer:
+        function timer() {
+            number-- // decrements the timer by 1
+            $("#timer").html("<h2>" + number + "</h2>");
+            if (number === 0) {
+                alert("Times Up!")
+            }
+        }
 
 
     });
