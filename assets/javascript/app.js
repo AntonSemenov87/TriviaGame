@@ -30,7 +30,6 @@ $(document).ready(function () {
                 question: "What was the name of small iPod?",
                 choice: ["iPod Pro", "iPod mini", "iPod shuffle", "iPod Grande"],
                 answer: 2,
-                photo: "assets/images/harvey.jpg"
             },
             {
                 question: "What is the name of watch made by Apple?",
@@ -48,16 +47,29 @@ $(document).ready(function () {
         var correctCount = 0;
         var wrongCount = 0;
 
+        //Timer:
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                seconds = parseInt(timer % 30, 10);
 
+                seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        // Timer:
-        function timer() {
-            number-- // decrements the timer by 1
-            $("#timer").html("<h2>" + number + "</h2>");
-            if (number === 0) {
-                alert("Times Up!")
-            }
+                display.textContent = seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
         }
+
+        window.onload = function () {
+            var thirtySeconds = 30,
+                display = document.querySelector('#timer');
+            startTimer(thirtySeconds, display);
+        };
+
+
 
 
     });
